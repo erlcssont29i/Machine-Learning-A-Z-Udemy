@@ -6,7 +6,8 @@
  這門課程是Udemy的[Machine Learning A-Z-Hands-On Python & R in Data Science](https://www.udemy.com/machinelearningchinese/)。
    有Python與R的實作版本，在這我只會專注於R的部分。 
   
-  1. 根據每一個part建立一個R代碼的檔案
+ 
+  1. 課程共有10個part，每一個part建立一個R代碼的檔案
   2. 練習中的DataSet可在此[下載](https://www.superdatascience.com/pages/%E4%B8%8B%E8%BD%BD%E6%95%B0%E6%8D%AE%E9%9B%86)
   
   

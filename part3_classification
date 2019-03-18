@@ -1,0 +1,14 @@
+Part_3: 分類 Classification
+
+与回归算法用于预测连续的数值不同，分类（classifcation）算法被应用于预测（非连续的）类别。
+和回归相似，分类算法包含线性模型（比如：逻辑回归，支持向量机SVM）和非线性模型（比如：核函数SVM，随机森林）。
+
+	1. 羅輯回歸 			(Logistic Regression)
+	2. 支持向量機 		(SVM)
+	3. 核函數支持向量機 	(Kernel SVM)
+	4. 樸素貝式 			(Naive Bayes)
+	5. 決策數 			(Decision Tree)
+	6. 隨機森林 			(Random Forest)
+
+
+*****本Part的重點體現於"分類器"的選擇(對應不同model)，其餘處理方式都大同小異

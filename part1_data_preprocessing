@@ -4,7 +4,7 @@ Part_1:數據預處理
 ================================
 
 # 1.下載數據集 (Get the Dataset)
-# 2.導入標準庫 (IMporting the Libraries) --  在R意思導入R包
+# 2.導入標準庫 (IMporting the Libraries) --  即導入R包
 # 3.導入數據集 (Importing the Dataet)
 dataset <- read.csv('Data.csv')
 

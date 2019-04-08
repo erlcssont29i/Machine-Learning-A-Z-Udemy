@@ -48,7 +48,7 @@ this class should be very handy and easy to have a sense of accomplishment.
 - Part 9 - Dimensionality Reduction: PCA, Kernel PCA
 - Part 10 - Model Selection & Boosting: k-fold Cross Validation, Grid Search.
  
-## R packages and function
+## R package and function
 
 
 

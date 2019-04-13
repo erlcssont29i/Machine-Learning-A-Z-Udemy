@@ -21,7 +21,7 @@ this class should be very handy and easy to have a sense of accomplishment.
 ## About this course
 - Part 1 - Data Preprocessing
 - Part 2 - Regression: Simple Linear Regression, Multiple Linear Regression, Polynomial Regression
-- Part 3 - Classification: Logistic Regression, SVM, Kernel SVM, Naive Bayes, Decision Tree Classification, Random Forest Classification
+- Part 3 - Classification: Logistic Regression, SVM, Kernel SVM, Naive Bayes, Decision Tree, Random Forest
 - Part 4 - Clustering: K-Means
 - Part 5 - Association Rule Learning: Apriori
 - Part 6 - Reinforcement Learning: Upper Confidence Bound, Thompson Sampling

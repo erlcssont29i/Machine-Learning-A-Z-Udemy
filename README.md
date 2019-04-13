@@ -50,6 +50,7 @@ Kernel SVM    | 第一列     | 第二列    | 3    |4       |5
 Naive Bayes    | 第一列     | 第二列    | 3    |4       |5
 Decision Tree    | 第一列     | 第二列    | 3    |4       |5
 Random Forest    | 第一列     | 第二列    | 3    |4       |5
+K-means    | 第一列     | 第二列    | 3    |4       |5
 Apriori    | 第一列     | 第二列    | 3    |4       |5
 Natural Language Processing    | 第一列     | 第二列    | 3    |4       |5
 Artificial Neural Networks   | 第一列     | 第二列    | 3    |4       |5

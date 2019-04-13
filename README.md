@@ -46,18 +46,18 @@ training_set[-3] = scale(training_set[-3])
 test_set[-3] = scale(test_set[-3])
 ```
 
-Algorithm     | Function     | Packages     | 3    |4       |5
- -------- | :-----------:  | :-----------: | :-----------:  | :-----------:  | :-----------:  
-Simple Learning Regression    |regressor= lm (formula = Salary ~ YearsExperience ,	data = training_set )     | 第二列    | 3    |4       |5   
-Logistic    | classifier = glm(formula = Purchased ~ .,family= binomial,data= training_set)    | 第二列    | 3    |4       |5
+Algorithm     | Function     | Packages     
+ -------- | :-----------:  | :-----------:  
+Simple Learning Regression    |regressor= lm (formula = Salary ~ YearsExperience ,	data = training_set )     |     
+Logistic    | classifier = glm(formula = Purchased ~ .,family= binomial,data= training_set)    |     
 SVM    | classifier = svm(formula = Purchased ~ .,data = training_set,type = 'C-classification',kernel = 'linear')   | library(e1071)    | 3    |4       |5
 Kernel SVM    | classifier = svm(formula = Purchased ~ .,data = training_set,type = 'C-classification',kernel = 'radial') #高斯核函數     | library(e1071)   | 3    |4       |5
-Naive Bayes    | classifier =naiveBayes(x=training_set[-3],y=training_set$Purchased)     | library(e1071)    | 3    |4       |5
-Decision Tree    | classifier = rpart(formular = Purchased ~ . , data = training_set	)    | library(rpart)    | 3    |4       |5
-Random Forest    | classifier = randomForest(x = training_set[-3],y = training_set$Purchased,ntree=10)     | library(randomForest)   | 3    |4       |5
-K-means    | 第一列     | 第二列    | 3    |4       |5
-Apriori    | dataset = read.transactions('Market_Basket_Optimisation.csv', sep = ',', rm.duplicates = TRUE) <br> rules = apriori(data = dataset, parameter = list(support = 0.003, confidence = 0.2))   | library(arules)| 3    |4       |5
-Natural Language Processing    | corpus = VCorpus(VectorSource(dataset_original$Review)) # 創建詞袋  <br> corpus = tm_map(corpus, content_transformer(tolower)) #大小寫轉換 （map=mapping 映射) <br> corpus = tm_map(corpus, removeNumbers) #清除數字，因為數字對目的不重要，相當於清除噪音 <br> corpus = tm_map(corpus, removePunctuation)  #清除標點 <br> corpus = tm_map(corpus, removeWords, stopwords()) #清除英文的虛詞 <br> corpus = tm_map(corpus, stemDocument) # 詞根化 <br> corpus = tm_map(corpus, stripWhitespace) # 清洗多餘空格 <br> dtm = DocumentTermMatrix(corpus) <br> dtm = removeSparseTerms(dtm, 0.999)| library(tm) <br> library(SnowballC) #清除英文的虛詞    | 3    |4       |5
-Artificial Neural Networks   | 第一列     | 第二列    | 3    |4       |5
-PCA  | pca = preProcess(x = training_set[-14], method = 'pca', pcaComp = 2) #pcaComp =把變量變成2個 <br> training_set = predict(pca, training_set)  <br> test_set = predict(pca, test_set) | library(caret)   | 3    |4       |5
-kernel PCA  | kpca = kpca(~., data = training_set[-3], kernel = 'rbfdot', features = 2) <br>  training_set_pca = as.data.frame(predict(kpca, training_set)) <br> training_set_pca$Purchased = training_set$Purchased   | library(kernlab)   | 3    |4       |5
+Naive Bayes    | classifier =naiveBayes(x=training_set[-3],y=training_set$Purchased)     | library(e1071)    
+Decision Tree    | classifier = rpart(formular = Purchased ~ . , data = training_set	)    | library(rpart)    
+Random Forest    | classifier = randomForest(x = training_set[-3],y = training_set$Purchased,ntree=10)     | library(randomForest)   
+K-means    | 第一列     | 第二列    
+Apriori    | dataset = read.transactions('Market_Basket_Optimisation.csv', sep = ',', rm.duplicates = TRUE) <br> rules = apriori(data = dataset, parameter = list(support = 0.003, confidence = 0.2))   | library(arules)
+Natural Language Processing    | corpus = VCorpus(VectorSource(dataset_original$Review)) # 創建詞袋  <br> corpus = tm_map(corpus, content_transformer(tolower)) #大小寫轉換 （map=mapping 映射) <br> corpus = tm_map(corpus, removeNumbers) #清除數字，因為數字對目的不重要，相當於清除噪音 <br> corpus = tm_map(corpus, removePunctuation)  #清除標點 <br> corpus = tm_map(corpus, removeWords, stopwords()) #清除英文的虛詞 <br> corpus = tm_map(corpus, stemDocument) # 詞根化 <br> corpus = tm_map(corpus, stripWhitespace) # 清洗多餘空格 <br> dtm = DocumentTermMatrix(corpus) <br> dtm = removeSparseTerms(dtm, 0.999)| library(tm) <br> library(SnowballC) #清除英文的虛詞    
+Artificial Neural Networks   | 第一列     | 第二列    
+PCA  | pca = preProcess(x = training_set[-14], method = 'pca', pcaComp = 2) #pcaComp =把變量變成2個 <br> training_set = predict(pca, training_set)  <br> test_set = predict(pca, test_set) | library(caret)   
+kernel PCA  | kpca = kpca(~., data = training_set[-3], kernel = 'rbfdot', features = 2) <br>  training_set_pca = as.data.frame(predict(kpca, training_set)) <br> training_set_pca$Purchased = training_set$Purchased   | library(kernlab)   

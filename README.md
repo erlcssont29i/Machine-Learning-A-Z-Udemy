@@ -32,7 +32,7 @@ this class should be very handy and easy to have a sense of accomplishment.
  
 ## R package and function
 
-### Spaling the dataset into Training Set and Test set
+Spaling the dataset into Training Set and Test set
 ```
 library(caTools)	
 set.seed(123) 
@@ -40,13 +40,12 @@ split = sample.split(dataset$Salary,SplitRatio = 2/3)
 training_set <- subset(dataset , split == TRUE)
 test_set <- subset(dataset , split == FALSE)
 ```
-### Feature Scaling
+Feature Scaling
 ```
 training_set[-3] = scale(training_set[-3])
 test_set[-3] = scale(test_set[-3])
 ```
-
-### choice Algorithm 
+Algorithm 
 Algorithm     | Function     | Packages     
  -------- | :-----------:  | :-----------:  
 Simple Learning Regression    |regressor= lm (formula = Salary ~ YearsExperience ,	data = training_set )     |     

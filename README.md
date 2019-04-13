@@ -51,7 +51,8 @@ this class should be very handy and easy to have a sense of accomplishment.
 ## R package and function
 algorithm     | 第一列     | 第二列     | 3    |4       |5
  -------- | :-----------:  | :-----------: | :-----------:  | :-----------:  | :-----------:  
- Logistic    | 第一列     | 第二列    | 3    |4       |5
+Simple Learning Regression    | 第一列     | 第二列    | 3    |4       |5
+Logistic    | 第一列     | 第二列    | 3    |4       |5
 SVM    | 第一列     | 第二列    | 3    |4       |5
 Kernel SVM    | 第一列     | 第二列    | 3    |4       |5
 Naive Bayes    | 第一列     | 第二列    | 3    |4       |5

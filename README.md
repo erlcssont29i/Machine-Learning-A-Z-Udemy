@@ -40,18 +40,27 @@ split = sample.split(dataset$Salary,SplitRatio = 2/3)
 training_set <- subset(dataset , split == TRUE)
 test_set <- subset(dataset , split == FALSE)
 ```
+Feature Scaling
+```
+training_set[-3] = scale(training_set[-3])
+test_set[-3] = scale(test_set[-3])
+```
 
-Algorithm     | 第一列     | 第二列     | 3    |4       |5
+Algorithm     | Function     | Packages     | 3    |4       |5
  -------- | :-----------:  | :-----------: | :-----------:  | :-----------:  | :-----------:  
-Simple Learning Regression    | 第一列     | 第二列    | 3    |4       |5
-Logistic    | 第一列     | 第二列    | 3    |4       |5
-SVM    | 第一列     | 第二列    | 3    |4       |5
-Kernel SVM    | 第一列     | 第二列    | 3    |4       |5
-Naive Bayes    | 第一列     | 第二列    | 3    |4       |5
-Decision Tree    | 第一列     | 第二列    | 3    |4       |5
-Random Forest    | 第一列     | 第二列    | 3    |4       |5
+Simple Learning Regression    |regressor= lm (formula = Salary ~ YearsExperience ,	data = training_set )     | 第二列    | 3    |4       |5
+    
+Logistic    | classifier = glm(formula = Purchased ~ .,family= binomial,data= training_set)    | 第二列    | 3    |4       |5
+SVM    | classifier = svm(formula = Purchased ~ .,data = training_set,type = 'C-classification',kernel = 'linear')   | library(e1071)    | 3    |4       |5
+Kernel SVM    | classifier = svm(formula = Purchased ~ .,data = training_set,type = 'C-classification',kernel = 'radial') #高斯核函數     | library(e1071)   | 3    |4       |5
+
+Naive Bayes    | classifier =naiveBayes(x=training_set[-3],y=training_set$Purchased)     | library(e1071)    | 3    |4       |5
+Decision Tree    | classifier = rpart(formular = Purchased ~ . , data = training_set	)    | library(rpart)    | 3    |4       |5
+Random Forest    | classifier = randomForest(x = training_set[-3],y = training_set$Purchased,ntree=10)     | library(randomForest)   | 3    |4       |5
 K-means    | 第一列     | 第二列    | 3    |4       |5
-Apriori    | 第一列     | 第二列    | 3    |4       |5
+Apriori    | dataset = read.transactions('Market_Basket_Optimisation.csv', sep = ',', rm.duplicates = TRUE) 
+rules = apriori(data = dataset, parameter = list(support = 0.003, confidence = 0.2))   | library(arules)
+    | 3    |4       |5
 Natural Language Processing    | 第一列     | 第二列    | 3    |4       |5
 Artificial Neural Networks   | 第一列     | 第二列    | 3    |4       |5
 PCA  | 第一列     | 第二列    | 3    |4       |5

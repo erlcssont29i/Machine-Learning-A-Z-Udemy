@@ -48,12 +48,10 @@ test_set[-3] = scale(test_set[-3])
 
 Algorithm     | Function     | Packages     | 3    |4       |5
  -------- | :-----------:  | :-----------: | :-----------:  | :-----------:  | :-----------:  
-Simple Learning Regression    |regressor= lm (formula = Salary ~ YearsExperience ,	data = training_set )     | 第二列    | 3    |4       |5
-    
+Simple Learning Regression    |regressor= lm (formula = Salary ~ YearsExperience ,	data = training_set )     | 第二列    | 3    |4       |5   
 Logistic    | classifier = glm(formula = Purchased ~ .,family= binomial,data= training_set)    | 第二列    | 3    |4       |5
 SVM    | classifier = svm(formula = Purchased ~ .,data = training_set,type = 'C-classification',kernel = 'linear')   | library(e1071)    | 3    |4       |5
 Kernel SVM    | classifier = svm(formula = Purchased ~ .,data = training_set,type = 'C-classification',kernel = 'radial') #高斯核函數     | library(e1071)   | 3    |4       |5
-
 Naive Bayes    | classifier =naiveBayes(x=training_set[-3],y=training_set$Purchased)     | library(e1071)    | 3    |4       |5
 Decision Tree    | classifier = rpart(formular = Purchased ~ . , data = training_set	)    | library(rpart)    | 3    |4       |5
 Random Forest    | classifier = randomForest(x = training_set[-3],y = training_set$Purchased,ntree=10)     | library(randomForest)   | 3    |4       |5

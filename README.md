@@ -61,3 +61,7 @@ Natural Language Processing    | corpus = VCorpus(VectorSource(dataset_original$
 Artificial Neural Networks   | 第一列     | 第二列    
 PCA  | pca = preProcess(x = training_set[-14], method = 'pca', pcaComp = 2) #pcaComp =把變量變成2個 <br> training_set = predict(pca, training_set)  <br> test_set = predict(pca, test_set) | library(caret)   
 kernel PCA  | kpca = kpca(~., data = training_set[-3], kernel = 'rbfdot', features = 2) <br>  training_set_pca = as.data.frame(predict(kpca, training_set)) <br> training_set_pca$Purchased = training_set$Purchased   | library(kernlab)   
+
+
+## Which classification algorithm should be used?
+

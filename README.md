@@ -57,6 +57,6 @@ Decision Tree    | classifier = rpart(formular = Purchased ~ . , data = training
 Random Forest    | classifier = randomForest(x = training_set[-3],y = training_set$Purchased,ntree=10)     | library(randomForest)   | 3    |4       |5
 K-means    | 第一列     | 第二列    | 3    |4       |5
 Apriori    | dataset = read.transactions('Market_Basket_Optimisation.csv', sep = ',', rm.duplicates = TRUE) <br> rules = apriori(data = dataset, parameter = list(support = 0.003, confidence = 0.2))   | library(arules)| 3    |4       |5
-Natural Language Processing    | 第一列     | 第二列    | 3    |4       |5
+Natural Language Processing    | corpus = VCorpus(VectorSource(dataset_original$Review)) # 創建詞袋  <br> corpus = tm_map(corpus, content_transformer(tolower)) #大小寫轉換 （map=mapping 映射) <br> corpus = tm_map(corpus, removeNumbers) #清除數字，因為數字對目的不重要，相當於清除噪音 <br> corpus = tm_map(corpus, removePunctuation)  #清除標點 <br> corpus = tm_map(corpus, removeWords, stopwords()) #清除英文的虛詞 <br> corpus = tm_map(corpus, stemDocument) # 詞根化 <br> corpus = tm_map(corpus, stripWhitespace) # 清洗多餘空格 <br> dtm = DocumentTermMatrix(corpus) <br> dtm = removeSparseTerms(dtm, 0.999)| library(tm) <br> library(SnowballC) #清除英文的虛詞    | 3    |4       |5
 Artificial Neural Networks   | 第一列     | 第二列    | 3    |4       |5
 PCA  | 第一列     | 第二列    | 3    |4       |5

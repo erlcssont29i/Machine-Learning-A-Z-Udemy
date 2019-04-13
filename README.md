@@ -50,7 +50,7 @@ this class should be very handy and easy to have a sense of accomplishment.
  
 ## R package and function
 
-### Spaling the dataset into Training Set and Test set
+Spaling the dataset into Training Set and Test set
 ```
 library(caTools)	
 set.seed(123) 

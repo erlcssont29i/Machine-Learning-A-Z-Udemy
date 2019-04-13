@@ -49,6 +49,16 @@ this class should be very handy and easy to have a sense of accomplishment.
 - Part 10 - Model Selection & Boosting: k-fold Cross Validation, Grid Search.
  
 ## R package and function
+
+### Spaling the dataset into Training Set and Test set
+```
+library(caTools)	
+set.seed(123) 
+split = sample.split(dataset$Salary,SplitRatio = 2/3)	
+training_set <- subset(dataset , split == TRUE)
+test_set <- subset(dataset , split == FALSE)
+```
+
 algorithm     | 第一列     | 第二列     | 3    |4       |5
  -------- | :-----------:  | :-----------: | :-----------:  | :-----------:  | :-----------:  
 Simple Learning Regression    | 第一列     | 第二列    | 3    |4       |5

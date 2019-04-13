@@ -46,6 +46,7 @@ training_set[-3] = scale(training_set[-3])
 test_set[-3] = scale(test_set[-3])
 ```
 Algorithm 
+
 Algorithm     | Function     | Packages     
  -------- | :-----------:  | :-----------:  
 Simple Learning Regression    |regressor= lm (formula = Salary ~ YearsExperience ,	data = training_set )     |     

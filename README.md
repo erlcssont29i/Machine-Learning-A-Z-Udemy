@@ -59,7 +59,7 @@ training_set <- subset(dataset , split == TRUE)
 test_set <- subset(dataset , split == FALSE)
 ```
 
-algorithm     | 第一列     | 第二列     | 3    |4       |5
+Algorithm     | 第一列     | 第二列     | 3    |4       |5
  -------- | :-----------:  | :-----------: | :-----------:  | :-----------:  | :-----------:  
 Simple Learning Regression    | 第一列     | 第二列    | 3    |4       |5
 Logistic    | 第一列     | 第二列    | 3    |4       |5

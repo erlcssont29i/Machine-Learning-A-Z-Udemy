@@ -56,9 +56,7 @@ Naive Bayes    | classifier =naiveBayes(x=training_set[-3],y=training_set$Purcha
 Decision Tree    | classifier = rpart(formular = Purchased ~ . , data = training_set	)    | library(rpart)    | 3    |4       |5
 Random Forest    | classifier = randomForest(x = training_set[-3],y = training_set$Purchased,ntree=10)     | library(randomForest)   | 3    |4       |5
 K-means    | 第一列     | 第二列    | 3    |4       |5
-Apriori    | dataset = read.transactions('Market_Basket_Optimisation.csv', sep = ',', rm.duplicates = TRUE) 
-rules = apriori(data = dataset, parameter = list(support = 0.003, confidence = 0.2))   | library(arules)
-    | 3    |4       |5
+Apriori    | dataset = read.transactions('Market_Basket_Optimisation.csv', sep = ',', rm.duplicates = TRUE) <br> rules = apriori(data = dataset, parameter = list(support = 0.003, confidence = 0.2))   | library(arules)| 3    |4       |5
 Natural Language Processing    | 第一列     | 第二列    | 3    |4       |5
 Artificial Neural Networks   | 第一列     | 第二列    | 3    |4       |5
 PCA  | 第一列     | 第二列    | 3    |4       |5

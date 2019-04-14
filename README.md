@@ -59,6 +59,8 @@ Random Forest    | classifier = randomForest(x = training_set[-3],y = training_s
 K-means    | 第一列     | 第二列    
 Apriori    | dataset = read.transactions('Market_Basket_Optimisation.csv', sep = ',', rm.duplicates = TRUE) <br> rules = apriori(data = dataset, parameter = list(support = 0.003, confidence = 0.2))   | library(arules)
 Natural Language Processing    | corpus = VCorpus(VectorSource(dataset_original$Review)) # 創建詞袋  <br> corpus = tm_map(corpus, content_transformer(tolower)) #大小寫轉換 <br> corpus = tm_map(corpus, removeNumbers) #清除數字  <br> corpus = tm_map(corpus, removePunctuation)  #清除標點 <br> corpus = tm_map(corpus, removeWords, stopwords()) #清除虛詞 <br> corpus = tm_map(corpus, stemDocument) # 詞根化 <br> corpus = tm_map(corpus, stripWhitespace) # 清洗空格 <br> dtm = DocumentTermMatrix(corpus) <br> dtm = removeSparseTerms(dtm, 0.999)| library(tm) <br> library(SnowballC) #清除英文虛詞    
+Upper confidence Bound(UCB)   | 第一列     | 第二列 
+Thompson   | 第一列     | 第二列 
 Artificial Neural Networks   | 第一列     | 第二列    
 PCA  | pca = preProcess(x = training_set[-14], method = 'pca', pcaComp = 2) #pcaComp =把變量變成2個 <br> training_set = predict(pca, training_set)  <br> test_set = predict(pca, test_set) | library(caret)   
 kernel PCA  | kpca = kpca(~., data = training_set[-3], kernel = 'rbfdot', features = 2) <br>  training_set_pca = as.data.frame(predict(kpca, training_set)) <br> training_set_pca$Purchased = training_set$Purchased   | library(kernlab)   

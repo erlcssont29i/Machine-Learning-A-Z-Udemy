@@ -58,7 +58,7 @@ Decision Tree    | classifier = rpart(formular = Purchased ~ . , data = training
 Random Forest    | classifier = randomForest(x = training_set[-3],y = training_set$Purchased,ntree=10)     | library(randomForest)   
 K-means    | 第一列     | 第二列    
 Apriori    | dataset = read.transactions('Market_Basket_Optimisation.csv', sep = ',', rm.duplicates = TRUE) <br> rules = apriori(data = dataset, parameter = list(support = 0.003, confidence = 0.2))   | library(arules)
-Natural Language Processing    | corpus = VCorpus(VectorSource(dataset_original$Review))#創建詞袋  <br> corpus = tm_map(corpus, content_transformer(tolower)) #大小寫轉換 <br> corpus = tm_map(corpus, removeNumbers) #清除數字  <br> corpus = tm_map(corpus, removePunctuation)  #清除標點 <br> corpus = tm_map(corpus, removeWords, stopwords()) #清除虛詞 <br> corpus = tm_map(corpus, stemDocument) # 詞根化 <br> corpus = tm_map(corpus, stripWhitespace) # 清洗空格 <br> dtm = DocumentTermMatrix(corpus) <br> dtm = removeSparseTerms(dtm, 0.999)| library(tm) <br> library(SnowballC) #清除英文虛詞    
+Natural Language Processing    | corpus = VCorpus(VectorSource(dataset_original$Review)) #創建詞袋  <br> corpus = tm_map(corpus, content_transformer(tolower)) #大小寫轉換 <br> corpus = tm_map(corpus, removeNumbers) #清除數字  <br> corpus = tm_map(corpus, removePunctuation)  #清除標點 <br> corpus = tm_map(corpus, removeWords, stopwords()) #清除虛詞 <br> corpus = tm_map(corpus, stemDocument) # 詞根化 <br> corpus = tm_map(corpus, stripWhitespace) # 清洗空格 <br> dtm = DocumentTermMatrix(corpus) <br> dtm = removeSparseTerms(dtm, 0.999)| library(tm) <br> library(SnowballC) #清除英文虛詞    
 Upper confidence Bound(UCB)   | 第一列     | 第二列 
 Thompson   | 第一列     | 第二列 
 Artificial Neural Networks   | 第一列     | 第二列    

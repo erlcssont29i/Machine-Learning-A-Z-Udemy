@@ -68,3 +68,58 @@ kernel PCA  | kpca = kpca(~., data = training_set[-3], kernel = 'rbfdot', featur
 
 ## Which classification algorithm should be used?
 
+
+## summary of data mining package
+### 連續因變量的預測：
+
+- stats包 lm函數，實現多元線性回歸
+- stats包 glm函數，實現廣義線性回歸
+- stats包 nls函數，實現非線性最小二乘回歸-- lm是將曲線直線化再做回歸，nls是直接擬合曲線。需要三個條件：曲線方程、數據位置、係數的估計值。
+ex nls(n~g/f(1+exp(u-t)/s)),data,start=c(h=8e4,u=16,s=5))$coef，其中h:高度,u:轉折點,s:離散程度
+- rpart包 rpart函數，基於CART算法的分類回歸樹模型
+- RWeka包 M5P函數，模型樹算法，集線性回歸和CART算法的優點
+- adabag包 bagging函數，基於rpart算法的集成算法
+- adabag包 boosting函數，基於rpart算法的集成算法
+- randomForest包 randomForest函數，基於rpart算法的集成算法
+- e1071包 svm函數，支持向量機算法
+- kernlab包 ksvm函數，基於核函數的支持向量機
+- nnet包 nnet函數，單隱藏層的神經網絡算法
+- neuralnet包 neuralnet函數，多隱藏層多節點的神經網絡算法
+- RSNNS包 mlp函數，多層感知器神經網絡
+- RSNNS包rbf函數，基於徑向基函數的神經網絡
+
+### 離散因變量的分類：
+- stats包 glm函數，實現Logistic回歸，選擇logit連接函數
+- stats包 knn函數，k最近鄰算法
+- kknn包 kknn函數，加權的k最近鄰算法
+- rpart包 rpart函數，基於CART算法的分類回歸樹模型
+- adabag包bagging函數，基於rpart算法的集成算法
+- adabag包boosting函數，基於rpart算法的集成算法
+- randomForest包randomForest函數，基於rpart算法的集成算法
+- party包ctree函數，條件分類樹算法
+- RWeka包OneR函數，一維的學習規則算法
+- RWeka包JPip函數，多維的學習規則算法
+- RWeka包J48函數，基於C4.5算法的決策樹
+- C50包C5.0函數，基於C5.0算法的決策樹
+- e1071包svm函數，支持向量機算法
+- kernlab包ksvm函數，基於核函數的支持向量機
+- e1071包naiveBayes函數，貝葉斯分類器算法
+- klaR包NaiveBayes函數，貝葉斯分類器算分
+- MASS包lda函數，線性判別分析
+- MASS包qda函數，二次判別分析
+- nnet包nnet函數，單隱藏層的神經網絡算法
+- RSNNS包mlp函數，多層感知器神經網絡
+- RSNNS包rbf函數，基於徑向基函數的神經網絡
+
+### 聚類：
+- Nbclust包Nbclust函數可以確定應該聚為幾類
+- stats包kmeans函數，k均值聚類算法
+- cluster包pam函數，k中心點聚類算法
+- stats包hclust函數，層次聚類算法
+- fpc包dbscan函數，密度聚類算法
+- fpc包kmeansruns函數，相比於kmeans函數更加穩定，而且還可以估計聚為幾類
+- fpc包pamk函數，相比於pam函數，可以給出參考的聚類個數
+- mclust包Mclust函數，期望最大（EM）算法
+
+### 關聯規則：
+- arules包apriori函數，Apriori關聯規則算法

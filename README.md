@@ -70,6 +70,7 @@ kernel PCA  | kpca = kpca(~., data = training_set[-3], kernel = 'rbfdot', featur
 
 
 ## summary of data mining package
+Data mining mainly includes four categories: prediction, classification, clustering and association. Different mining purposes choose corresponding algorithms
 ### 連續因變量的預測：
 
 - stats包 lm函數，實現多元線性回歸
